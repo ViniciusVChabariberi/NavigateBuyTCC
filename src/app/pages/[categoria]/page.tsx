@@ -15,19 +15,19 @@ import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import Modal from '@/components/ModalFavorito';
 
 {/* Listas Json de produtos */ }
-import acessoriosData from '@/../api/listasJson/Acessorios.json';
-import bebesData from '@/../api/listasJson/Bebes.json';
-import belezaData from '@/../api/listasJson/Beleza.json';
-import decoracaoData from '@/../api/listasJson/Decoracao.json';
-import eletroData from '@/../api/listasJson/Eletrodomesticos.json';
-import esporteData from '@/../api/listasJson/Esporte.json';
-import infoData from '@/../api/listasJson/Informatica.json';
-import lazerData from '@/../api/listasJson/Lazer.json';
-import mercadoData from '@/../api/listasJson/MercadoFarmacia.json';
-import papelariaData from '@/../api/listasJson/Papelaria.json';
-import petsData from '@/../api/listasJson/Pets.json';
-import roupasData from '@/../api/listasJson/Roupas.json';
-import sapatoData from '@/../api/listasJson/Sapato.json';
+import acessoriosData from '@/utils/listasJson/Acessorios.json';
+import bebesData from '@/utils/listasJson/Bebes.json';
+import belezaData from '@/utils/listasJson/Beleza.json';
+import decoracaoData from '@/utils/listasJson/Decoracao.json';
+import eletroData from '@/utils/listasJson/Eletrodomesticos.json';
+import esporteData from '@/utils/listasJson/Esporte.json';
+import infoData from '@/utils/listasJson/Informatica.json';
+import lazerData from '@/utils/listasJson/Lazer.json';
+import mercadoData from '@/utils/listasJson/MercadoFarmacia.json';
+import papelariaData from '@/utils/listasJson/Papelaria.json';
+import petsData from '@/utils/listasJson/Pets.json';
+import roupasData from '@/utils/listasJson/Roupas.json';
+import sapatoData from '@/utils/listasJson/Sapato.json';
 
 {/* Parâmetros dos produtos */ }
 interface Produto {

@@ -17,19 +17,19 @@ interface ProdutosJson {
 }
 
 const loadProducts = async () => {
-  const acessoriosData: Produto[] = await import('@/../api/listasJson/Acessorios.json');
-  const bebesData: Produto[] = await import('@/../api/listasJson/Bebes.json');
-  const belezaData: Produto[] = await import('@/../api/listasJson/Beleza.json');
-  const decoracaoData: Produto[] = await import('@/../api/listasJson/Decoracao.json');
-  const eletroData: Produto[] = await import('@/../api/listasJson/Eletrodomesticos.json');
-  const esporteData: Produto[] = await import('@/../api/listasJson/Esporte.json');
-  const infoData: Produto[] = await import('@/../api/listasJson/Informatica.json');
-  const lazerData: Produto[] = await import('@/../api/listasJson/Lazer.json');
-  const mercadoData: Produto[] = await import('@/../api/listasJson/MercadoFarmacia.json');
-  const papelariaData: Produto[] = await import('@/../api/listasJson/Papelaria.json');
-  const petsData: Produto[] = await import('@/../api/listasJson/Pets.json');
-  const roupasData: Produto[] = await import('@/../api/listasJson/Roupas.json');
-  const sapatoData: Produto[] = await import('@/../api/listasJson/Sapato.json');
+  const acessoriosData: Produto[] = await import('@/utils/listasJson/Acessorios.json');
+  const bebesData: Produto[] = await import('@/utils/listasJson/Bebes.json');
+  const belezaData: Produto[] = await import('@/utils/listasJson/Beleza.json');
+  const decoracaoData: Produto[] = await import('@/utils/listasJson/Decoracao.json');
+  const eletroData: Produto[] = await import('@/utils/listasJson/Eletrodomesticos.json');
+  const esporteData: Produto[] = await import('@/utils/listasJson/Esporte.json');
+  const infoData: Produto[] = await import('@/utils/listasJson/Informatica.json');
+  const lazerData: Produto[] = await import('@/utils/listasJson/Lazer.json');
+  const mercadoData: Produto[] = await import('@/utils/listasJson/MercadoFarmacia.json');
+  const papelariaData: Produto[] = await import('@/utils/listasJson/Papelaria.json');
+  const petsData: Produto[] = await import('@/utils/listasJson/Pets.json');
+  const roupasData: Produto[] = await import('@/utils/listasJson/Roupas.json');
+  const sapatoData: Produto[] = await import('@/utils/listasJson/Sapato.json');
 
   const produtosJson: ProdutosJson = {
     Acessórios: acessoriosData,
