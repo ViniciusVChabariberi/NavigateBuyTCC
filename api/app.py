@@ -7,7 +7,8 @@ from api.routes import api, enviar_alerta_favoritos
 from apscheduler.schedulers.background import BackgroundScheduler
 
 app = Flask(__name__)
-CORS(app, supports_credentials=True, resources={r"/*": {"origins": "http://localhost:3000", "methods": ["GET", "POST", "PUT", "OPTIONS", "DELETE"]}})
+origins = os.environ.get('CORS_ORIGINS', 'https://navigate-buy-tcc-viniciusvchabariberis-projects.vercel.app')
+CORS(app, supports_credentials=True, resources={r"/*": {"origins": origins, "methods": ["GET", "POST", "PUT", "OPTIONS", "DELETE"]}})
 
 scheduler = BackgroundScheduler()
 
@@ -33,8 +34,12 @@ def iniciar_agendador():
     if not scheduler.running:
         scheduler.add_job(enviar_alerta_favoritos, 'cron', day_of_week='fri', hour=15, minute=00)
         scheduler.start()
+        print("Agendador iniciado com sucesso")
+    else:
+        print("Agendador já está em execução")
 
 iniciar_agendador()
 
 if __name__ == '__main__':
-    app.run(port=5000, debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=True)
