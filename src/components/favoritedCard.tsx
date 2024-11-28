@@ -21,7 +21,7 @@ const Favoritedcard: React.FC = () => {
   useEffect(() => {
     const fetchFavoritos = async () => {
       try {
-        const response = await fetch('http://localhost:5000/app/produtos_favoritos', {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/app/produtos_favoritos`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ const Favoritedcard: React.FC = () => {
   {/* Função para remover os produtos favoritados */ }
   const handleUnfavoriteProduct = async (produtoId: number) => {
     try {
-      const response = await fetch('http://localhost:5000/app/desfavoritar_produto', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/app/desfavoritar_produto`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -92,7 +92,7 @@ const Favoritedcard: React.FC = () => {
   const handleAlertPreferenceChange = async (produtoId: number, receber_alerta: boolean) => {
     const novaPreferencia = !receber_alerta;
     try {
-      const response = await fetch('http://localhost:5000/app/atualizar_alerta_produto', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/app/atualizar_alerta_produto`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

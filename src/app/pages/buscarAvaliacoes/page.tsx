@@ -52,7 +52,7 @@ const Avaliacao = () => {
     setLoading(true); 
 
     try {
-      const response = await fetch("http://localhost:5000/app/avaliacao", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/app/avaliacao`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

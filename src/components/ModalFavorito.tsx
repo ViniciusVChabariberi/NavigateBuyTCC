@@ -24,7 +24,7 @@ const ModalFavorito: React.FC<ModalProps> = ({ onClose, onConfirm, produtoId }) 
             return;
         }
         try {
-            const response = await fetch('http://localhost:5000/app/atualizar_alerta_produto', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/app/atualizar_alerta_produto`, {
                 method: 'POST',
                 credentials: "include",
                 headers: {

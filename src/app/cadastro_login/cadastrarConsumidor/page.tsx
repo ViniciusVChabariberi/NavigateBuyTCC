@@ -27,7 +27,7 @@ const Cadastro = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/app/cadastrar', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/app/cadastrar`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ const Cadastro = () => {
   // Função para inserir e confirmar código passado ao email
   const confirmarCodigo = async () => {
     try {
-      const response = await fetch('http://localhost:5000/app/confirmar_codigo', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/app/confirmar_codigo`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

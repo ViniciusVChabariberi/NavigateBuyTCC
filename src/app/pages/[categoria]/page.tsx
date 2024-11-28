@@ -325,7 +325,7 @@ const Categorias: React.FC = () => {
   {/* Função para favoritar produtos */ }
   const handleSaveProduct = async (produto: Produto) => {
     try {
-      const response = await fetch('http://localhost:5000/app/favoritar_produto', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/app/favoritar_produto`, {
         method: 'POST',
         credentials: "include",
         headers: {

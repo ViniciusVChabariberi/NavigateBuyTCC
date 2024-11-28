@@ -20,7 +20,7 @@ const Editar = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/app/perfil", {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/app/perfil`, {
           method: "GET",
           credentials: "include",
         });
@@ -104,7 +104,7 @@ const Editar = () => {
     console.log("Dados do perfil:", Array.from(profileUpdateData.entries()));
 
     try {
-      const response = await fetch("http://localhost:5000/app/editar-perfil", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/app/editar-perfil`, {
         method: "PUT",
         credentials: "include",
         body: profileUpdateData,
@@ -125,7 +125,7 @@ const Editar = () => {
   // Função para logout
   const habilitarLogout = async () => {
     try {
-      const response = await fetch("http://localhost:5000/app/logout", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/app/logout`, {
         method: "POST",
         credentials: "include",
       });

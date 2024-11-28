@@ -24,7 +24,7 @@ const Login = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/app/login', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/app/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ const Login = () => {
   // Função para alterar senha
   const alterarSenha = async () => {
     try {
-      const response = await fetch('http://localhost:5000/app/solicitar-email', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/app/solicitar-email`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
