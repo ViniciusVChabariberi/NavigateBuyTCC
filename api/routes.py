@@ -3,8 +3,8 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from itsdangerous import URLSafeTimedSerializer
 from werkzeug.utils import secure_filename
-from models import User, CodigoDeConfirmacao, Produtos, db
-from special import cadastro_corpo_email, redefinir_corpo_email, alerta_corpo_email
+from api.models import User, CodigoDeConfirmacao, Produtos, db
+from api.special import cadastro_corpo_email, redefinir_corpo_email, alerta_corpo_email
 import json, subprocess, uuid, smtplib, random, os
 
 UPLOAD_FOLDER = 'static/uploads/avatars'
