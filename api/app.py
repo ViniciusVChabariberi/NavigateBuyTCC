@@ -2,8 +2,8 @@ import os
 from flask import Flask
 from flask_cors import CORS
 from api.config import Config
-from models import db
-from routes import api, enviar_alerta_favoritos
+from api.models import db
+from api.routes import api, enviar_alerta_favoritos
 from apscheduler.schedulers.background import BackgroundScheduler
 
 app = Flask(__name__)
