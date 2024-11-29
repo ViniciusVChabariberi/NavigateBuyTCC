@@ -5,6 +5,7 @@ from api.config import Config
 from api.models import db
 from api.routes import api, enviar_alerta_favoritos
 from apscheduler.schedulers.background import BackgroundScheduler
+from flask_migrate import Migrate
 
 app = Flask(__name__)
 origins = os.environ.get('CORS_ORIGINS', 'https://navigate-buy-tcc-viniciusvchabariberis-projects.vercel.app')
@@ -21,6 +22,7 @@ app.config.from_object(Config)
 
 # Inicializando o SQLAlchemy
 db.init_app(app)
+migrate = Migrate(app, db)
 
 # Registrando o blueprint
 app.register_blueprint(api, url_prefix='/app')
