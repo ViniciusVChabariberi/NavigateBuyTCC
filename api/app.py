@@ -15,7 +15,7 @@ scheduler = BackgroundScheduler()
 
 # Configurações do Flask
 app.secret_key = os.environ.get('FLASK_SECRET_KEY', 'default_secret_key')
-app.config['SESSION_COOKIE_SECURE'] = False  
+app.config['SESSION_COOKIE_SECURE'] = True 
 app.config['SESSION_COOKIE_HTTPONLY'] = True
 app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
 app.config.from_object(Config)

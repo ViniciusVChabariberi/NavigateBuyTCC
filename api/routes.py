@@ -69,9 +69,6 @@ def confirm_code():
         email_consumidor = session.get('email_consumidor')
         senha_consumidor = session.get('senha_consumidor')
 
-        if not usuario or not email_consumidor or not senha_consumidor:
-            return jsonify({"error": "Dados de usuário não encontrados."}), 400
-
         user = User(usuario=usuario, email_consumidor=email_consumidor)
         user.set_senha(senha_consumidor) 
 
