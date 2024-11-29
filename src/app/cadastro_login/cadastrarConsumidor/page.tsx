@@ -57,7 +57,6 @@ const Cadastro = () => {
 
   // Função para inserir e confirmar código passado ao email
   const confirmarCodigo = async () => {
-    console.log(code)
     try {
       const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/app/confirmar_codigo`, {
         method: 'POST',
