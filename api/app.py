@@ -42,6 +42,13 @@ def iniciar_agendador():
 
 iniciar_agendador()
 
+with app.app_context():
+    try:
+        db.engine.connect()
+        print("Conexão com o banco de dados bem-sucedida!")
+    except Exception as e:
+        print(f"Erro ao conectar com o banco de dados: {e}")
+
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port, debug=True)

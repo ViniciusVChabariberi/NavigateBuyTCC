@@ -276,8 +276,8 @@ def favoritar():
         return dado.strip().lower()
 
     produto_existente = Produtos.query.filter(
-        Produtos.título == normalizar_dado(data['título']),
-        Produtos.preço == data['preço'],
+        Produtos.titulo == normalizar_dado(data['título']),
+        Produtos.preco == data['preço'],
         Produtos.link == normalizar_dado(data['link']),
         Produtos.usuario_id == usuario_id
     ).first()
@@ -351,8 +351,8 @@ def produtos_favoritos():
 
     favoritos = [{
         "id": favorito.id,
-        "titulo": favorito.título,
-        "preco": favorito.preço,
+        "titulo": favorito.titulo,
+        "preco": favorito.preco,
         "imagem": favorito.imagem,
         "link": favorito.link,
         "loja": favorito.loja,

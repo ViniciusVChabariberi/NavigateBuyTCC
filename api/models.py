@@ -28,8 +28,8 @@ class CodigoDeConfirmacao(db.Model):
 class Produtos(db.Model):
     __tablename__ = 'produtos'
     id = db.Column(db.Integer, primary_key=True)
-    título = db.Column(db.String(255), nullable=False)
-    preço = db.Column(db.String(255), nullable=False)
+    titulo = db.Column(db.String(255), nullable=False)
+    preco = db.Column(db.String(255), nullable=False)
     imagem = db.Column(db.String(255), nullable=False)
     link = db.Column(db.String(255), nullable=False)
     loja = db.Column(db.String(255), nullable=False)
@@ -54,8 +54,8 @@ CREATE TABLE confirmacoes (
 
 CREATE TABLE produtos (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    título VARCHAR(255) NOT NULL,
-    preço VARCHAR(255) NOT NULL,
+    titulo VARCHAR(255) NOT NULL,
+    preco VARCHAR(255) NOT NULL,
     imagem VARCHAR(255) NOT NULL,
     link VARCHAR(255) NOT NULL,
     loja VARCHAR(255) NOT NULL,
