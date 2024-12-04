@@ -327,7 +327,7 @@ def enviar_alerta_favoritos():
         usuarios = User.query.all()
 
         for user in usuarios:
-            favoritos = Produtos.query.filter_by(usuario_id=user.id, receber_alerta=True).all()
+            favoritos = Produtos.query.filter_by(usuario_id=user.id_consumidor, receber_alerta=True).all()
             email_consumidor = user.email_consumidor
 
             if favoritos:
