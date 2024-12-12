@@ -14,7 +14,7 @@ const Favoritos = () => {
 
     {/* Efeito para receber dados do perfil */ }
     useEffect(() => {
-        const fetchData = async () => {
+        const consultar = async () => {
             try {
                 const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/app/perfil`, {
                     method: "GET",
@@ -47,13 +47,13 @@ const Favoritos = () => {
                         theme: "dark"
                     });
                     setTimeout(() => {
-                        window.location.href = '../cadastro_login/login';
+                        window.location.href = '../cadastro_login/fazerLogin';
                     }, 3000);
                 }
             }
         };
 
-        fetchData();
+        consultar();
     }, []);
 
     return (
